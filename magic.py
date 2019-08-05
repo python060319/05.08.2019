@@ -79,12 +79,21 @@ class Point():
         return Point(
             self.x + other.x,
             self.y + other.y)
+    def __eq__(self, other):
+        return self.x == other.x\
+            and self.y == other.y
+    def __gt__(self, other):
+        return self.x > other.x\
+            and self.y > other.y
+    def __ne__(self, other):
+        return not self.__eq__(other)
 
 p1 = Point(3.4, 5)
 p2 = Point(3.6, 9)
 p3 = p1 + p2 # Point(7, 14)
 print(p3)
+print('==',p1 == p2)
+print('!=',p1 != p2)
+print('>',p1 > p2)
 
-# __eq__  x1==x2 y1 == y2
-# _gt__ x1 > x2 y1 > y2
-# __ne__ return not __eq__
+
