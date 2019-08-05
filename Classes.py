@@ -19,3 +19,14 @@ del lenovo
 # create 2 persons
 # set default values:
 #  name 'incognito', age 0, height 0
+class Person():
+    def __init__(self,
+                 name = 'Incognito',
+                 age = 0,
+                 height = 0.5):
+        self.name = name
+        self.age = age
+        self.height = height
+goofy = Person()
+mickey = Person('Mickey', 1, 1)
+mickey = Person(height = 2)
